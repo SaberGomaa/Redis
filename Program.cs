@@ -1,11 +1,16 @@
-﻿using StackExchange.Redis;
+﻿using Redis;
+using StackExchange.Redis;
 
 // connect to redis
 ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("localhost");
 IDatabase database = redis.GetDatabase();
 
 //setGetStringRedis(database);
-setGetHashRedis(database);
+//setGetHashRedis(database);
+
+JSON json = new JSON(database);
+json.JsonSet();
+//json.jsonGet();
 
 void setGetStringRedis(IDatabase db)
 {
