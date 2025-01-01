@@ -8,9 +8,15 @@ IDatabase database = redis.GetDatabase();
 //setGetStringRedis(database);
 //setGetHashRedis(database);
 
-JSON json = new JSON(database);
-json.JsonSet();
+//JSON json = new JSON(database);
+//json.JsonSet();
 //json.jsonGet();
+
+
+DSRedis dsRedis = new DSRedis(database);
+dsRedis.listMove();
+//dsRedis.ListPushPop();
+
 
 void setGetStringRedis(IDatabase db)
 {
