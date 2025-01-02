@@ -14,9 +14,12 @@ IDatabase database = redis.GetDatabase();
 
 
 DSRedis dsRedis = new DSRedis(database);
-dsRedis.listMove();
+//dsRedis.listMove();
 //dsRedis.ListPushPop();
-
+//dsRedis.setAddRemove();
+//dsRedis.SortedSet();
+//dsRedis.setUnion();
+dsRedis.ZADDSet();
 
 void setGetStringRedis(IDatabase db)
 {
