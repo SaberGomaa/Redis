@@ -19,7 +19,13 @@ DSRedis dsRedis = new DSRedis(database);
 //dsRedis.setAddRemove();
 //dsRedis.SortedSet();
 //dsRedis.setUnion();
-dsRedis.ZADDSet();
+//dsRedis.ZADDSet();
+
+Redis.Stream stream = new Redis.Stream(database);
+
+//stream.StreamAdd();
+//stream.streamMaxLen();
+stream.streamRead();
 
 void setGetStringRedis(IDatabase db)
 {
